@@ -1,0 +1,12 @@
+example\tliaswebmanagement\service\impl\EmpServiceImpl.class
+example\tliaswebmanagement\controller\EmpController.class
+example\tliaswebmanagement\service\impl\DeptServiceImpl.class
+example\tliaswebmanagement\pojo\Result.class
+example\tliaswebmanagement\TliasWebManagementApplication.class
+example\tliaswebmanagement\pojo\Emp.class
+example\tliaswebmanagement\mapper\EmpMapper.class
+example\tliaswebmanagement\controller\DeptController.class
+example\tliaswebmanagement\mapper\DeptMapper.class
+example\tliaswebmanagement\service\DeptService.class
+example\tliaswebmanagement\pojo\Dept.class
+example\tliaswebmanagement\service\EmpService.class
