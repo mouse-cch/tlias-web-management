@@ -18,4 +18,5 @@ public interface EmpMapper {
 
    // @Select("select * from emp")
     List<Emp> list(@Param("name")String name, @Param("gender") Short gender,@Param("begin") LocalDate begin,@Param("end") LocalDate end);
+    void delete(List<Integer> ids);
 }
