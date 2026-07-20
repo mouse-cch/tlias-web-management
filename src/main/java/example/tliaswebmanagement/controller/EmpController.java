@@ -1,5 +1,6 @@
 package example.tliaswebmanagement.controller;
 
+import example.tliaswebmanagement.pojo.Emp;
 import example.tliaswebmanagement.pojo.PageBean;
 import example.tliaswebmanagement.pojo.Result;
 import example.tliaswebmanagement.service.EmpService;
@@ -14,13 +15,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Slf4j
-@RestController
+@RestController("/emps")
 public class EmpController {
 
     @Autowired
     private EmpService empService;
 
-    @GetMapping("/emps")
+    @GetMapping("/")
     public Result page(
             @RequestParam(defaultValue = "1") Integer page,
             @RequestParam(defaultValue = "10") Integer pageSize,
@@ -37,6 +38,13 @@ public class EmpController {
     public Result delete(@PathVariable List<Integer> ids){
         log.info("批量删除操作，ids:{}",ids);
         empService.delete(ids);
+        return Result.success();
+    }
+
+    @PostMapping("/")
+    public Result save(@RequestBody Emp emp){
+        log.info("插入员工:{}",emp);
+        empService.save(emp);
         return Result.success();
     }
 }

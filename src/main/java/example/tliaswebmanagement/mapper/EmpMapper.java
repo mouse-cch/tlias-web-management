@@ -1,6 +1,7 @@
 package example.tliaswebmanagement.mapper;
 
 import example.tliaswebmanagement.pojo.Emp;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -19,4 +20,8 @@ public interface EmpMapper {
    // @Select("select * from emp")
     List<Emp> list(@Param("name")String name, @Param("gender") Short gender,@Param("begin") LocalDate begin,@Param("end") LocalDate end);
     void delete(List<Integer> ids);
+
+    @Insert("insert into emp(username,name,gender,image,job,entrydate,dept_id,create_time,update_time) " +
+            "values(#{username},#{name},#{gender},#{image},#{job},#{entrydate},#{deptId},#{createTime},#{updateTime})")
+    void insert(Emp emp);
 }
