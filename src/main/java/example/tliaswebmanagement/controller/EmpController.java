@@ -15,13 +15,14 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Slf4j
-@RestController("/emps")
+@RestController
+@RequestMapping("/emps")
 public class EmpController {
 
     @Autowired
     private EmpService empService;
 
-    @GetMapping("/")
+    @GetMapping
     public Result page(
             @RequestParam(defaultValue = "1") Integer page,
             @RequestParam(defaultValue = "10") Integer pageSize,
@@ -41,7 +42,7 @@ public class EmpController {
         return Result.success();
     }
 
-    @PostMapping("/")
+    @PostMapping
     public Result save(@RequestBody Emp emp){
         log.info("插入员工:{}",emp);
         empService.save(emp);
