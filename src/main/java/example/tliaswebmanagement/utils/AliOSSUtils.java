@@ -13,7 +13,8 @@ import java.util.UUID;
 public class AliOSSUtils {
     String endpoint = "oss-cn-qingdao.aliyuncs.com";
     String region = "cn-qingdao";
-    // 通过环境变量获取访问凭证
+
+    //通过环境变量获取访问凭证
     String accessKeyId = System.getenv("OSS_ACCESS_KEY_ID");
     String accessKeySecret = System.getenv("OSS_ACCESS_KEY_SECRET");
     // 创建凭证提供者
@@ -33,6 +34,7 @@ public class AliOSSUtils {
         String extname = filename.substring(index);
         //利用uuid为上传的文件建立有唯一标识的文件名
         String newFilename = UUID.randomUUID() + extname;
+
         //转存文件到OSS
 
         // 显式声明使用V4签名算法

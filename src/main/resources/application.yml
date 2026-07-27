@@ -1,0 +1,10 @@
+#定义对象/Map集合
+user:
+  name: Tom
+  age: 20
+  address: beijing
+#定义数组/set/List
+hobby:
+  - Java
+  - C
+  - Python
