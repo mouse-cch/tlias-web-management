@@ -38,6 +38,7 @@ public class EmpServiceImpl implements EmpService {
     public void save(Emp emp) {
         emp.setCreateTime(LocalDateTime.now());
         emp.setUpdateTime(LocalDateTime.now());
+
         empMapper.insert(emp);
     }
 }
