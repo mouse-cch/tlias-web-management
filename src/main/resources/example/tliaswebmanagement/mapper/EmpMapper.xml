@@ -13,7 +13,7 @@
                 and gender = #{gender}
             </if>
             <if test="begin != null and end != null">
-                and entrydate between #{begin} and #{end}
+                and entry_date between #{begin} and #{end}
             </if>
         </where>
     </select>

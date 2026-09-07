@@ -1,0 +1,10 @@
+# 编译产物（含 target/classes/application.yml）
+target/
+
+# IDEA
+.idea/
+*.iml
+
+# 含密钥的配置文件
+src/main/resources/application.yml
+#src/main/resources/application.properties

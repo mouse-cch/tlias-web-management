@@ -23,7 +23,7 @@ public interface EmpMapper {
     void delete(List<Integer> ids);
 
     @Insert("insert into emp(username,name,gender,image,job,entry_date,dept_id,create_time,update_time) " +
-            "values(#{username},#{name},#{gender},#{image},#{job},#{entrydate},#{deptId},#{createTime},#{updateTime})")
+            "values(#{username},#{name},#{gender},#{image},#{job},#{entryDate},#{deptId},#{createTime},#{updateTime})")
     void insert(Emp emp);
 
     @Select("select * from emp where id = #{id}")
